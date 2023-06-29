@@ -14,6 +14,6 @@ abstract class ViewModel<S : ViewState, I : ViewIntent>(
     open val state: LiveData<S> = _state
 
     fun reduce(viewIntent: I) {
-        _state.value = reducer.reduce(state, viewIntent)
+        _state.value = reducer.reduce(state.value, viewIntent)
     }
 }

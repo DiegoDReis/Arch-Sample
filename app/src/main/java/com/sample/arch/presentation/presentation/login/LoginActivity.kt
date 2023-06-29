@@ -1,10 +1,10 @@
 package com.sample.arch.presentation.presentation.login
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import com.sample.arch.databinding.ActivityLoginBinding
-import androidx.activity.viewModels
 
 class LoginActivity : AppCompatActivity() {
 
