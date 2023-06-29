@@ -1,4 +1,4 @@
-package com.sample.arch.presentation
+package com.sample.arch.presentation.presentation.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,11 +22,11 @@ class LoginActivity : AppCompatActivity() {
     private fun setupView() {
         binding.apply {
             emailEditText.doOnTextChanged { text, _, _, _ ->
-                loginViewModel.dispatchIntent(LoginIntent.SetEmailText(text.toString()))
+                loginViewModel.setEmail(text.toString())
             }
 
             passwordEditText.doOnTextChanged { text, _, _, _ ->
-                loginViewModel.dispatchIntent(LoginIntent.SetPasswordText(text.toString()))
+                loginViewModel.setPassword(text.toString())
             }
         }
     }
