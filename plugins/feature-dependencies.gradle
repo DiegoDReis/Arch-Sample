@@ -1,0 +1,15 @@
+def featurePath = ":feature:"
+
+rootProject.allprojects { Project project->
+
+    if(project.path.contains(featurePath)){
+        setupDependency(project.path)
+    }
+
+}
+
+def setupDependency(String path){
+    dependencies{
+        implementation project(path)
+    }
+}
