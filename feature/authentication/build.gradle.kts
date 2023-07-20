@@ -11,12 +11,6 @@ android {
 
 dependencies {
 
-    implementation(Internal.coreKtx)
-    implementation(Internal.appCompat)
-    implementation(Internal.material)
-    implementation(Internal.constraintLayout)
-    implementation(Internal.fragmentKtx)
-    testImplementation(Test.junit)
-    androidTestImplementation(Test.junitAndroid)
-    androidTestImplementation(Test.espressoCore)
+    implementation(project(Module.commonAndroid))
+
 }
