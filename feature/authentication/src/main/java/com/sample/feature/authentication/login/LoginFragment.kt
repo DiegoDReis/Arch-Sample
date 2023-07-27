@@ -30,6 +30,7 @@ class LoginFragment : Fragment() {
         binding.apply {
             emailEditText.doOnTextChanged { text, _, _, _ ->
                 loginViewModel.setEmail(text.toString())
+                
             }
 
             passwordEditText.doOnTextChanged { text, _, _, _ ->
@@ -39,7 +40,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun observerState() {
-        loginViewModel.state.observe(this) { state ->
+        loginViewModel.state.observe(viewLifecycleOwner) { state ->
             binding.apply {
                 state.emailText.takeIf { it != emailEditText.text.toString() }?.let {
                     emailEditText.setText(it)

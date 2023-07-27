@@ -7,9 +7,13 @@ object Versions {
     const val constraintLayout = "2.1.4"
     const val fragmentKtx = "1.6.0"
 
-    // Test libs versions
+    // Unit test libs versions
     const val junit = "4.13.2"
+    const val mockk = "1.13.5"
+
+    // Android test libs versions
     const val junitAndroid =  "1.1.5"
     const val espressoCore =  "3.5.1"
+
 
 }

@@ -4,5 +4,6 @@ import com.sample.core.common.presentation.ViewState
 
 data class LoginViewState(
     val emailText: String = "",
-    val passwordText: String = ""
+    val passwordText: String = "",
+    val emailError: Boolean = false
 ) : ViewState

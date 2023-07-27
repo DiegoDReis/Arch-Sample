@@ -14,7 +14,10 @@ dependencies {
     api(Internal.coreKtx)
     api(project(Module.designSystem))
 
-    testApi(Test.junit)
+    api(Test.junit)
+    api(Test.mockk)
+    api("androidx.arch.core:core-testing:2.2.0")
+
     androidTestApi(Test.junitAndroid)
     androidTestApi(Test.espressoCore)
 }
