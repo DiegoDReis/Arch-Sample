@@ -13,4 +13,8 @@ dependencies {
 
     implementation(project(Module.commonAndroid))
 
+    testImplementation(Test.junit)
+    testImplementation(Test.mockk)
+    testImplementation(Test.coreArch)
+
 }

@@ -10,6 +10,7 @@ object Versions {
     // Unit test libs versions
     const val junit = "4.13.2"
     const val mockk = "1.13.5"
+    const val coreArch = "2.2.0"
 
     // Android test libs versions
     const val junitAndroid =  "1.1.5"

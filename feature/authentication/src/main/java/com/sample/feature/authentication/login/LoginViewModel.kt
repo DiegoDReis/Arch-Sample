@@ -6,7 +6,6 @@ class LoginViewModel(private val validateEmail: EmailValidateUseCase) :
     ViewModel<LoginViewState, LoginViewIntent>(LoginViewState(), LoginViewReducer()) {
 
     fun setEmail(email: String) {
-
         reduce(LoginViewIntent.SetEmailText(email,validateEmail(email)))
 
     }
