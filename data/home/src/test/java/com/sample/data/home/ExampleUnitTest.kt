@@ -1,4 +1,4 @@
-package com.sample.feature.authentication
+package com.sample.data.home
 
 import org.junit.Test
 

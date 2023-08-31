@@ -6,6 +6,8 @@ object Versions {
     const val material = "1.9.0"
     const val constraintLayout = "2.1.4"
     const val fragmentKtx = "1.6.0"
+    const val room = "2.4.2"
+    const val coroutines = "1.3.9"
 
     // Unit test libs versions
     const val junit = "4.13.2"
