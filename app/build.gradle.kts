@@ -22,6 +22,9 @@ dependencies {
     implementation(Internal.constraintLayout)
     implementation(Internal.fragmentKtx)
     implementation(project(Module.designSystem))
+
+    implementation("io.insert-koin:koin-android:3.5.0")
+
     testImplementation(Test.junit)
     androidTestImplementation(Test.junitAndroid)
     androidTestImplementation(Test.espressoCore)

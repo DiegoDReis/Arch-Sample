@@ -18,5 +18,7 @@ dependencies {
     api(Internal.coroutines)
     api(Internal.coroutinesCore)
 
+    implementation("io.insert-koin:koin-android:3.5.0")
+
     kapt(Internal.roomCompiler)
 }
