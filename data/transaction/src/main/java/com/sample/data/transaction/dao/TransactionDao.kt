@@ -1,17 +1,17 @@
-package com.sample.arch.datalocal.dao
+package com.sample.data.transaction.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
-import com.sample.arch.datalocal.entity.Transaction
+import com.sample.data.transaction.entity.TransactionEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TransactionDao {
     @Insert(onConflict = REPLACE)
-    suspend fun insertTransaction(vararg transaction: Transaction)
+    suspend fun insertTransaction(transactionEntity: TransactionEntity)
 
     @Query("select * from `transaction`")
-    fun getTransaction(): Flow<List<Transaction>>
+    fun getTransactions(): Flow<List<TransactionEntity>>
 }

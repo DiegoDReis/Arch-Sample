@@ -1,0 +1,15 @@
+def dataPath = ":data:"
+
+rootProject.allprojects { Project project->
+
+    if(project.path.contains(dataPath)){
+        setupDependency(project.path)
+    }
+
+}
+
+def setupDependency(String path){
+    dependencies{
+        implementation project(path)
+    }
+}

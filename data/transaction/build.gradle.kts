@@ -12,7 +12,9 @@ android {
 
 dependencies {
 
-    implementation(project(Module.dataLocal))
+    implementation(Internal.roomRuntime)
+    implementation(Internal.roomKotlin)
+    implementation(project(Module.commonAndroid))
 
     kapt(Internal.roomCompiler)
 }

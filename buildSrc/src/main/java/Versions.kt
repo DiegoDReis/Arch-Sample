@@ -18,5 +18,8 @@ object Versions {
     const val junitAndroid =  "1.1.5"
     const val espressoCore =  "3.5.1"
 
+    // Esternal libs
+    const val koin = "3.5.0"
+
 
 }

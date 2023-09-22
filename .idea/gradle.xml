@@ -18,7 +18,7 @@
             <option value="$PROJECT_DIR$/core/datalocal" />
             <option value="$PROJECT_DIR$/core/designsystem" />
             <option value="$PROJECT_DIR$/data" />
-            <option value="$PROJECT_DIR$/data/home" />
+            <option value="$PROJECT_DIR$/data/transaction" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/authentication" />
           </set>

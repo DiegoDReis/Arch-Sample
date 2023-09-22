@@ -5,20 +5,16 @@ plugins {
 }
 
 apply("$rootDir/plugins/android-common.gradle")
+apply("$rootDir/plugins/data-dependencies.gradle")
 
 android {
     namespace = "com.sample.arch.datalocal"
 }
 
 dependencies {
-
-    api(Internal.coreKtx)
-    api(Internal.roomRuntime)
-    api(Internal.roomKotlin)
-    api(Internal.coroutines)
-    api(Internal.coroutinesCore)
-
-    implementation("io.insert-koin:koin-android:3.5.0")
+    implementation(Internal.roomRuntime)
+    implementation(Internal.roomKotlin)
+    implementation(project(Module.commonAndroid))
 
     kapt(Internal.roomCompiler)
 }

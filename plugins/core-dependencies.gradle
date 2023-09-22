@@ -1,0 +1,15 @@
+def corePath = ":core:"
+
+rootProject.allprojects { Project project->
+
+    if(project.path.contains(corePath)){
+        setupDependency(project.path)
+    }
+
+}
+
+def setupDependency(String path){
+    dependencies{
+        implementation project(path)
+    }
+}

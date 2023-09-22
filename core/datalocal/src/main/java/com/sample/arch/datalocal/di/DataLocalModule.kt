@@ -1,6 +1,7 @@
 package com.sample.arch.datalocal.di
 
 import com.sample.arch.datalocal.database.AppDatabase
+import com.sample.data.transaction.dao.TransactionDao
 import org.koin.dsl.module
 
 object DataLocalModule {
@@ -11,6 +12,5 @@ object DataLocalModule {
 
         // DAO
         factory { get<AppDatabase>().transactionDao() }
-
     }
 }

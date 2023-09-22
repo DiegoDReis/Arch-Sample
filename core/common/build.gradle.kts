@@ -12,7 +12,9 @@ android {
 dependencies {
 
     api(Internal.coreKtx)
-    api(project(Module.designSystem))
+    api(External.koinAndroid)
+    api(Internal.coroutines)
+    api(Internal.coroutinesCore)
 
     androidTestApi(Test.junitAndroid)
     androidTestApi(Test.espressoCore)
