@@ -16,5 +16,10 @@ dependencies {
     implementation(Internal.roomKotlin)
     implementation(project(Module.commonAndroid))
 
+    androidTestImplementation(Test.junitAndroid)
+    androidTestImplementation(Test.espressoCore)
+    androidTestImplementation(Test.coroutinesAndroid)
+    androidTestImplementation(Test.coreArchAndroidTest)
+
     kapt(Internal.roomCompiler)
 }

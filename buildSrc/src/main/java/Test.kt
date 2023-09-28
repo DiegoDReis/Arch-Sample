@@ -7,5 +7,6 @@ object Test {
     // Android tests
     const val junitAndroid =  "androidx.test.ext:junit:${Versions.junitAndroid}"
     const val espressoCore =  "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
-
+    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesAndroid}"
+    const val coreArchAndroidTest = "androidx.arch.core:core-testing:${Versions.coreArchAndroidTest}"
 }
