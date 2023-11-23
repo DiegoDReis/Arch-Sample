@@ -1,7 +1,6 @@
 package com.sample.data.transaction.datasource
 
 import android.accounts.NetworkErrorException
-import com.sample.data.transaction.ListException
 import com.sample.data.transaction.dao.TransactionDao
 import com.sample.data.transaction.entity.TransactionEntity
 import io.mockk.MockKAnnotations
@@ -9,7 +8,6 @@ import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert
@@ -93,12 +91,10 @@ internal class TransactionLocalDataSourceTest() {
     @Test
     fun `When getTransactions should return a throw`() {
         // Give
-        val exception = ListException(
-            listOf(IOException(), NetworkErrorException())
-        )
+        val exception = IOException()
         // When
         every { transactionDao.getTransactions() } throws exception
-        val result = Assert.assertThrows(ListException::class.java) { dataSource.getTransactions() }
+        val result = Assert.assertThrows(IOException::class.java) { dataSource.getTransactions() }
         // Then
         Assert.assertEquals(result, exception)
     }

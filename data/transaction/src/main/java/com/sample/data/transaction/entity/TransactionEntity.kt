@@ -6,8 +6,8 @@ import java.util.Date
 
 @Entity(tableName = "transaction")
 data class TransactionEntity(
-    @PrimaryKey
-    val id: Int,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int? = null,
     val description: String,
     val price: Float,
     val date: Date

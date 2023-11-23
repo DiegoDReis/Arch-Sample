@@ -15,6 +15,7 @@ dependencies {
     implementation(Internal.roomRuntime)
     implementation(Internal.roomKotlin)
     implementation(project(Module.commonAndroid))
+    implementation(project(Module.transactionDomain))
 
     kapt(Internal.roomCompiler)
 
