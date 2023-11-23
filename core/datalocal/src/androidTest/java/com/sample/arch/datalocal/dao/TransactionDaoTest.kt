@@ -41,7 +41,7 @@ internal class TransactionDaoTest {
 
     @After
     fun onComplete() {
-        //database.close()
+        database.close()
     }
 
     @Test
@@ -60,5 +60,34 @@ internal class TransactionDaoTest {
         // THEN
         val result = dao.getTransactions().first()
         Assert.assertEquals(result, listOf(transaction))
+    }
+
+
+    @Test
+    fun whenInsertAListOfTransactionShouldUpdateTheTransactionTable() = runBlocking{
+        // GIVEN
+        val transaction1 = TransactionEntity(
+            id = 1,
+            description = "description",
+            price = 2.5F,
+            date = Date()
+        )
+        val transaction2 = TransactionEntity(
+            id = 2,
+            description = "description",
+            price = 2.5F,
+            date = Date()
+        )
+
+        val transactions = listOf(transaction1, transaction2)
+
+        transactions.forEach { dao.insertTransaction(it) }
+
+        // WHEN
+        val result = dao.getTransactions().first()
+
+
+        // THEN
+        Assert.assertEquals(result, transactions)
     }
 }

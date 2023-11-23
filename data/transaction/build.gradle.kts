@@ -17,4 +17,8 @@ dependencies {
     implementation(project(Module.commonAndroid))
 
     kapt(Internal.roomCompiler)
+
+    testImplementation(Test.mockk)
+    testImplementation(Test.junitAndroid)
+    testImplementation(Test.coreArchAndroidTest)
 }

@@ -9,7 +9,6 @@ internal class TransactionLocalDataSourceImpl(
     private val dao: TransactionDao
 ) : TransactionLocalDataSource {
 
-
     override fun insertTransaction(transactionEntity: TransactionEntity) = flow {
         emit(dao.insertTransaction(transactionEntity))
     }
