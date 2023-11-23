@@ -6,5 +6,5 @@ data class Transaction(
     val id: Int?,
     val description: String,
     val price: Float,
-    val date: Date
+    val date: Date?
 )

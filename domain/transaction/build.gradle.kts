@@ -5,4 +5,7 @@ plugins {
 
 dependencies{
     implementation(Internal.coroutinesCore)
+
+    testImplementation(Test.mockk)
+    testImplementation(kotlin("test"))
 }
